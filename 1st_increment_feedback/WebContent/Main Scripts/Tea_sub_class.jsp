@@ -139,15 +139,7 @@ try{
     String year1=request.getParameter("select_year"),div1=request.getParameter("select_div"),tid=request.getParameter("select_teacher"),sid=request.getParameter("select_subject");
     if(s!=null)
     {
-       	sql="select ran1,ran2 from class where year='"+year1+"' and division="+div1+";"; 
-        resultSet = statement.executeQuery(sql);
-        resultSet.next();	
-       	String ran1 = resultSet.getString("ran1");
-      	  	String ran2 = resultSet.getString("ran2");
-      	  	System.out.println("IDHAR ARA HAI");
-     	  	for(int v=Integer.parseInt(ran1); v<=Integer.parseInt(ran2); v++){
-     	  		statement.executeUpdate("insert into studcheck(rollno,year,division,sid) values("+v+",'"+year1+"',"+div1+","+sid+");"); 	
-		}
+       
       	System.out.println("For ke bahar aya");
     	  	  	
         System.out.println("Done With Sameer Section");
@@ -163,9 +155,18 @@ try{
     		    <p style="color:#0000FF"><%out.println("Already Mapped");%></p>
     		 <% 	
     	}else{
-    		 sql = "insert into teacher_class_subject values(null,'"+tid+"','"+year1+"','"+div1+"','"+sid+"')";
+    		sql = "insert into teacher_class_subject values(null,'"+tid+"','"+year1+"','"+div1+"','"+sid+"')";
    	        statement.executeUpdate(sql);
-   	        %>
+		
+   	        sql="select ran1,ran2 from class where year='"+year1+"' and division="+div1+";"; 
+        	resultSet = statement.executeQuery(sql);
+        	resultSet.next();	
+       		String ran1 = resultSet.getString("ran1");
+      	  	String ran2 = resultSet.getString("ran2");
+      	  	for(int v=Integer.parseInt(ran1); v<=Integer.parseInt(ran2); v++){
+     	  		statement.executeUpdate("insert into studcheck(rollno,year,division,sid) values("+v+",'"+year1+"',"+div1+","+sid+");"); 	
+		}
+		%>
    		    <p style="color:#0000FF"><%out.println("MAPPING ADDED");%></p>
    		    <%	
     	}
