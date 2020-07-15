@@ -2,7 +2,7 @@
 <%@page import="java.sql.*,javax.sql.*"%>
 
 <%
- 		// Last Auther : Ayan Gadpal
+ 		// Last Author : Ayan Gadpal
 		Class.forName("com.mysql.jdbc.Driver");
 		String database = (String)session.getAttribute("curdb");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database, "Deva", "dev123456");
@@ -32,7 +32,6 @@
         
 		selectQuery = "select subject_name,domain_name from subject where subject_id = "+subject;	
 		rs = st.executeQuery(selectQuery);
-
          if(rs.next())
         {
         	domain_name = rs.getString("domain_name");
@@ -63,7 +62,6 @@
 			nostud = r2-r1;
 			//System.out.println("++++++++++++++"+nostud);
         } */
-
         int total = 0;
 %>
 
@@ -80,12 +78,19 @@
 	</script>		
 	
 <body>
+<% 
+String Sem;
+if(database.split("_",-2)[4].equals("sem1"))
+	Sem = "1";
+else
+	Sem = "2";
+%>
 	<img src="theme-assets/images/logo/pict.jpg" style="height:120px;"/>
 	<h1>PICT FEEDBACK REPORT</h1>
 	<hr>
 	<label><b>Name of staff : </b></label><label> <%= teacher %></label><br>
-	<label><b>Academic Year : </b>2019-20 (Hard coded DUMMY)</label><br>
-	<label><b>Sem : II </b>(Hard coded DUMMY)</label><br>
+	<label><b>Academic Year : </b><%=database.split("_",-2)[2] +"-"+ database.split("_",-2)[3] %></label><br>
+	<label><b>Semester :</b> <%=Sem%> </label><br>
 	<label><b>Class : </b></label><label> <%= year %> <%= div %> </label><br>
 	<label><b>Subject : </b></label><label> <%= subject %></label><br>
 	
@@ -103,7 +108,6 @@
 		selectQuery = "select * from feedback where qid="+qid+" and cat_id="+cat_id;
 		String qname = " ";
 		int score = 0;
-
 		if(rs1.next())
 		{
 			qname = rs1.getString("question");
