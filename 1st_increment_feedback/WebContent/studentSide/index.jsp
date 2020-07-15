@@ -126,29 +126,29 @@
             		$('#ques'+no).append('<p>'+no+'. <%=rs2.getString("question")%></p>');
             		if('<%=rs2.getString("option5")%>' == null)
             		{
-            			$('#ques'+no).append('<input type="radio" value="40" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="30" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="20" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+            			$('#ques'+no).append('<input type="radio" value="50" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="35" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="25" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
                 		$('#ques'+no).append('<input type="radio" value="10" name = "'+no+'"/><%=rs2.getString("option4")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
             		}
             		else if('<%=rs2.getString("option4")%>' == null)
             		{
-            			$('#ques'+no).append('<input type="radio" value="40" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+            			$('#ques'+no).append('<input type="radio" value="50" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
                 		$('#ques'+no).append('<input type="radio" value="30" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="20" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="10" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
             		}
             		else if('<%=rs2.getString("option3")%>' == null)
             		{
-            			$('#ques'+no).append('<input type="radio" value="40" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="30" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+            			$('#ques'+no).append('<input type="radio" value="50" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="10" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
             		}
             		else
            			{
-            			$('#ques'+no).append('<input type="radio" value="40" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="30" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="20" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="10" name = "'+no+'"/><%=rs2.getString("option4")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
-                		$('#ques'+no).append('<input type="radio" value="0" name = "'+no+'"/><%=rs2.getString("option5")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+            			$('#ques'+no).append('<input type="radio" value="50" name = "'+no+'"/><%=rs2.getString("option1")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="40" name = "'+no+'"/><%=rs2.getString("option2")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="30" name = "'+no+'"/><%=rs2.getString("option3")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="20" name = "'+no+'"/><%=rs2.getString("option4")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
+                		$('#ques'+no).append('<input type="radio" value="10" name = "'+no+'"/><%=rs2.getString("option5")%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp');
            			}
             	}
             	no++;
@@ -249,7 +249,7 @@
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
 
-     <div class="main-menu menu-fixed menu-light menu-accordion  menu-shadow " style="width:40%;" data-scroll-to-active="true" data-img="theme-assets/images/backgrounds/02.jpg">
+     <div class="main-menu menu-fixed menu-light menu-accordion  menu-shadow " style="width:20%;" data-scroll-to-active="true" data-img="theme-assets/images/backgrounds/02.jpg">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto">
