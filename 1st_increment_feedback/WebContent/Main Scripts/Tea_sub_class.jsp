@@ -152,7 +152,7 @@ try{
     	  	  	
         System.out.println("Done With Sameer Section");
   	  	
-	    String checkQuery = "select * from teacher_class_subject where cid_year='"+year1+"' and cid_div="+div1+" and sid = "+sid+";";
+	    String checkQuery = "select * from teacher_class_subject where tid='"+tid+"' and cid_year='"+year1+"' and cid_div="+div1+" and sid = "+sid+";";
     	Statement stCheck = connection.createStatement();
     	ResultSet rs = stCheck.executeQuery(checkQuery);
     	
