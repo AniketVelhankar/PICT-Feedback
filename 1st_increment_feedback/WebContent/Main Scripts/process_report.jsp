@@ -48,10 +48,10 @@
         rs = st.executeQuery(selectQuery);	
 		rs.next();
 		int Count = rs.getInt("COUNT(rollno)");
-		out.println("Year : "+year);	
-		out.println("SID : "+subject);	
-		out.println("Division : "+div);	
-		out.println("COUNT : "+Count);	
+	//	out.println("Year : "+year);	
+	//	out.println("SID : "+subject);	
+	//	out.println("Division : "+div);	
+	//	out.println("COUNT : "+Count);	
 		
 /* 		selectQuery = "select ran1,ran2 from class where year='"+year+"' and division="+div; */
 		
