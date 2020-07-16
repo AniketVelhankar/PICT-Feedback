@@ -25,7 +25,8 @@
 		}
 		catch(Exception e){
 			System.out.println(e);
-			error="ERROR! Request cannot be fulfilled";
+			if(!e.toString().contains("foreign key constraint"))
+				error="ERROR! Request cannot be fulfilled";
 		}
         /* ResultSet rs = st.executeQuery("select * from student where year='"+year+"' and division='"+div+"'");
         
