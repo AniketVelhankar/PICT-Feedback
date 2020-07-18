@@ -102,17 +102,17 @@
 	<div class="col">	
      <form action="processques.jsp" method="post">
 		<label>Enter the Question</label>
-		<input name="question" type="text" /><br>
+		<input name="question" type="text" required/><br>
 		<label>Option 1 (50 marks)</label>
-		<input name="option1" type="text" /><br>
+		<input name="option1" type="text" required/><br>
 		<label>Option 2 (40 marks)</label>
-		<input name="option2" type="text" /><br>
+		<input name="option2" type="text" required/><br>
 		<label>Option 3 (30 marks)</label>
-		<input name="option3" type="text" /><br>
+		<input name="option3" type="text" required/><br>
 		<label>Option 4 (20 marks)</label>
-		<input name="option4" type="text" /><br>
+		<input name="option4" type="text" required/><br>
 		<label>Option 5 (10 marks)</label>
-		<input name="option5" type="text" /><br>
+		<input name="option5" type="text" required/><br>
 		<input type="hidden" name="temp_name" value="<%= temp_name %>">  
 		<input type="submit" class="btn" id="add1" name="single" value="Add Question"/> 
 	</form>

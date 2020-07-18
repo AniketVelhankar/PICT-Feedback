@@ -315,9 +315,7 @@
 													rs2.next();								    			
 									    			if(rs2.getInt("fc")==1)
 									    			{
-				
 									    				%>
-							
 														<li class="nav-item"><a style="color: currentColor; cursor: not-allowed; opacity: 0.5;text-decoration: none;"  ><%=name %>_<%=sub %></a></li>
 														<%
 									    			}
