@@ -23,7 +23,7 @@
         
         if(rs.next())
 			cat_id = rs.getString("cat_id");
-        
+        	
 		selectQuery = "select name from teachers where id="+teacher;
 		rs = st.executeQuery(selectQuery);
 		
@@ -36,18 +36,11 @@
         {
         	domain_name = rs.getString("domain_name");
         }
-        if(domain_name.equals("CTL"))
-        {
-        	//SELECT COUNT(rollno) FROM studcheck WHERE fc = 1 and year = "TE" and division = 2 and sid = 59
-        	selectQuery = "select Count(rollno) from studcheck where fc=1 and year = '"+year+"' and sid='"+subject+"' and division="+div;
-        }
-         else  if(domain_name.equals("LTL"))
-        {
-        	
-        }  
+        selectQuery = "select Count(DISTINCT(rollno)) as Count from studcheck where fc=1 and year = '"+year+"' and sid='"+subject+"' and division="+div;
         rs = st.executeQuery(selectQuery);	
 		rs.next();
-		int Count = rs.getInt("COUNT(rollno)");
+		int Count = rs.getInt("Count");
+		out.println("Count : "+Count);
 	//	out.println("Year : "+year);	
 	//	out.println("SID : "+subject);	
 	//	out.println("Division : "+div);	

@@ -312,7 +312,7 @@
 									    			String subid = rs.getString("sid");
 									    			System.out.println(subid+"  "+tid);
 									    			rs2 = statement2.executeQuery("select * from studcheck where sid="+subid+" and rollno="+rollno+";");
-														while(rs2.next())								    			
+													rs2.next();								    			
 									    			if(rs2.getInt("fc")==1)
 									    			{
 				
